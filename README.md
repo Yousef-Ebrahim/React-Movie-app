@@ -1,4 +1,4 @@
-<img width="1356" height="659" alt="image" src="https://github.com/user-attachments/assets/d0e5c6a7-c14e-4a0a-8333-b2b5d27f0a9d" /><img width="1356" height="659" alt="image" src="https://github.com/user-attachments/assets/51b52d88-35ca-4b60-bead-50d328b52d7f" /># 🎬 Movie React App
+ React App
 
 A modern and responsive movie browsing application built with React.
 

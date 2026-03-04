@@ -1,51 +1,68 @@
-# 🎬 Movie React App
+<img width="1356" height="659" alt="image" src="https://github.com/user-attachments/assets/d0e5c6a7-c14e-4a0a-8333-b2b5d27f0a9d" /><img width="1356" height="659" alt="image" src="https://github.com/user-attachments/assets/51b52d88-35ca-4b60-bead-50d328b52d7f" /># 🎬 Movie React App
 
 A modern and responsive movie browsing application built with React.
 
 ## 🚀 Features
-- 🔎 Search for movies in real-time
-- 📄 View movie details (title, poster, rating, overview)
-- ⭐ Add movies to favorites
-- 🌙 Dark/Light mode support
-- 📱 Fully responsive design
+ - Real-time search for TV shows & movies
+ - 📄 View details (title, poster, genres, summary)
+ - ⭐ Add/remove favorites dynamically
+ - 📱 Fully responsive layout for all screen sizes
+ - 🎨 Optional support for Dark/Light mode
 
 ## 🛠️ Built With
-- React (Hooks)
-- Fetch API / Axios
-- Tailwind CSS
-- DaisyUI (optional)
-- Movie API (e.g., TMDB)
+- React (Hooks) – Functional components & state management
+- Axios / Fetch API – API calls
+- Tailwind CSS + DaisyUI – Styling and UI components
+ - Movie API – e.g., TVMaze
 
 ## 🎯 Purpose
 This project was built to practice:
 - React state management
-- API integration
+ - Integrate external APIs with fetching & error handling
 - Conditional rendering
 - Component-based architecture
 
 ## 📸 Screenshots
-(Add your screenshots here)
+### Home Page
+![Home](screenshots/1.png)
+### Movie Modal
+![Modal](screenshots/6.png)
+### Favorites Page
+![Favorites](screenshots/3.png)
+### localStorge
+![Favorites](screenshot/4.png)
+### others
+![](screenshot/2.png)
+![](screenshot/4.png)
 
 =======
-# React + Vite
+Live Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://react-movie-app-six-tau.vercel.app/
+ـ=======
+=======
+📂 Project Structure
+src/
+├─ components/
+│  ├─ Navbar.jsx
+│  ├─ MovieCard.jsx
+│  ├─ SearchForm.jsx
+│  └─ Favorites.jsx
+├─ pages/
+│  └─ Home.jsx
+├─ services/
+│  └─ api.js
+└─ App.jsx
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 41d67ef (create react movie app)
+=======
+📝 Installation
+git clone https://github.com/YousefEbrahim/react-movie-app.git
+cd react-movie-app
+npm install
+npm run dev
+=======
 
 
 ## 📦 Author
 
-Built by Yousef Ibrahim as part of a React learning journey.
+Yousef Ibrahim – Frontend React Developer

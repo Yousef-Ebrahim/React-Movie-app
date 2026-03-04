@@ -26,18 +26,20 @@ function MovieCard({ shows, favorites, setFavorites }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="p-4 md:p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {shows.map((item) => {
           const isFavorite = favorites.some((fav) => fav.id === item.show.id);
 
           return (
             <div
-              className="card bg-slate-600 shadow-sm rounded-lg hover:shadow-md transition-shadow duration-300"
+              className="relative bg-white dark:bg-gray-800 text-black dark:text-white shadow-sm rounded-lg hover:shadow-md hover:scale-105 transition-transform duration-300 overflow-hidden"
               key={item.show.id}
             >
               <figure className="h-48 overflow-hidden">
                 <img
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover aspect-w-2 aspect-h-3 transform scale-105 on hover
+transition duration-300 
+"
                   src={
                     item.show.image?.medium ||
                     "https://via.placeholder.com/210x295?text=No+Image"
@@ -47,12 +49,15 @@ function MovieCard({ shows, favorites, setFavorites }) {
               </figure>
               <button
                 onClick={() => toggleFavorite(item.show)}
-                className="mt-2 text-2xl"
+                className=" p-1 rounded-full shadow-md mt-2 text-2xl absolute top-2 right-2 hover:bg-white/30"
               >
                 {isFavorite ? "❤️" : "🤍"}
               </button>
               <div className="card-body p-4">
-                <h2 className="card-title text-lg text-slate-900 font-bold">
+                <h2
+                  className="card-title text-lg
+                 text-blue-500 font-bold"
+                >
                   {item.show.name}
                 </h2>
                 <p className="text-sm mt-2 line-clamp-3">
@@ -60,12 +65,15 @@ function MovieCard({ shows, favorites, setFavorites }) {
                     ? item.show.summary.replace(/<[^>]+>/g, "")
                     : "No description available."}
                 </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  {item.show.genres.join(", ")}
+                </p>
                 <div className="card-actions justify-between mt-4">
                   <button
-                    className="btn btn-primary btn-sm"
+                    className="btn btn-primary btn-sm w-full transition-all hover:scale-105"
                     onClick={() => openModal(item.show)}
                   >
-                    More Details
+                    👁️ More Details
                   </button>
                 </div>
               </div>
@@ -78,7 +86,7 @@ function MovieCard({ shows, favorites, setFavorites }) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-slate-500 rounded-xl shadow-lg max-w-lg w-full p-6 relative">
             <button
-              className="absolute top-3 right-3 text-gray-950 hover:text-gray-800"
+              className="text-2xl absolute top-3 right-3 text-gray-950 hover:text-gray-800"
               onClick={closeModal}
             >
               ✕
